@@ -1,0 +1,618 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/* Transition */
+a, .btn {
+    transition: all 300ms ease;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    color: #000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: #121212;
+    text-decoration: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+
+}
+
+a:hover  {
+    color: gray;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181,181,181);
+
+}
+
+/* Add this CSS rule to style.css */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Adjust as needed */
+}
+/* Add this CSS rule to style.css */
+.logo img {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.logo:hover {
+    cursor: default;
+}
+/* Hamburger Menu */
+#hamburger-nav {
+    display:none ;
+
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    background-color: rgb(2, 2, 2);
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: all .3 ease-in-out;
+
+}
+
+.menu-links li {
+    list-style: none;
+
+}
+.menu-links li:hover {
+    color: gray;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181,181,181);
+
+}
+
+.menu-links.open {
+    max-height: 300px;
+    background-color: rgba(0, 0, 0, 0.525);
+    border-radius: 5%;
+    
+
+}
+
+.hamburger-icon.open span:first-child{
+transform: rotate(45deg) translate(10px , 5px);
+
+}
+.hamburger-icon.open span:nth-child(2){
+opacity: 0;
+
+}
+.hamburger-icon.open span:last-child{
+transform: rotate(-45deg) translate(10px , -5px);
+
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* sections */
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container {
+    display: flex;
+}
+
+/* Profile Section */
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rep;
+    height: 80vh;
+}
+
+.section__pic-container {
+    text-align: center;
+    padding: 1rem;
+}
+
+.section__text {
+    align-self: center;
+    text-align: center;
+    margin-left: 5%;
+}
+
+.section__text-p {
+    font-weight: 600px;
+}
+
+.section__text__p1 {
+    text-align: center;
+    
+}
+.section__text__p2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+
+}
+
+.title {
+    font-size: 3rem ;
+    text-align: center;
+}
+#socials-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+
+}
+
+/* Icons */
+.icon {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Buttons */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+
+
+}
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-color-1 {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-color-2 {
+    background-color: #28a745;
+    color: #fff;
+}
+.btn-color-1:hover, .btn-color-2:hover {
+    cursor: pointer;
+    
+}
+.btn-color-1, .btn-color-2:hover {
+    background: rgb(53, 53 , 53);
+    color: white;
+}
+.btn-color-1:hover {
+
+    background: rgb(0,0,0);
+
+}
+
+.btn-color-2 {
+    background: none;
+}
+.btn-color-2:hover {
+    border: rgb(255,255,255) 0.1rem solid;
+}
+.btn-container {
+    gap: 1rem;
+}
+
+/* About Section */
+
+#about {
+    position: relative;
+}
+.about-containers {
+    gap:2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+}
+
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-containers , .about-details-container {
+display: flex;
+}
+
+.about-pic {
+    border-radius: 2rem;
+}
+.arrow {
+    position: absolute;
+    right: -5rem ;
+    bottom: 2.5rem;
+}
+
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163,163,163);
+    text-align: center;
+}
+
+.section-container {
+    gap: 4rem;
+    height: 80%;
+}
+
+.section__pic-container {
+    height: 400px ;
+    width: 400px;
+    margin: auto 0;
+}
+
+/* Experience section */
+
+#experience {
+    position: relative;
+}
+
+.experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.article-container {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+
+article {
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+article .icon {
+    cursor: default;
+}
+
+/* Project Section */
+
+#projects {
+    position:relative;
+
+}
+
+.color-container {
+    border-color: rgb(163, 163, 163);
+    background-color: rgb(250, 250, 250);
+}
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
+.project-img {
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+    transition: .2s;
+    border: 2px solid gray;
+
+}
+.project-img:hover {
+    opacity: .9;
+    border: 2px solid black;
+}
+
+.project-title {
+    margin: 1rem;
+    color: black;
+
+}
+
+.project-btn {
+    color: black;
+    border-color: rgb(163, 163, 163);
+}
+
+/* Contact */
+
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: (250,250,250);
+    margin: 2rem auto;
+    padding: 0.5rem ;
+}
+
+.contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin: 1rem;
+
+}
+
+.contact-info-container p {
+    font-size: larger;
+
+
+}
+
+.contact-icon {
+    cursor: default;
+}
+.email-icon {
+    height: 2.5rem;
+}
+/* Footer Section */
+footer {
+    height: 26vh;
+    margin: 0 1rem;
+}
+footer p {
+    text-align: center;
+}
+/* mediaqueries.css */
+
+/* Example for larger screens */
+@media (min-width: 1024px) {
+    .nav-links {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+/* Media queries for mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: white;
+        border-top: 1px solid #ccc;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .hamburger-icon {
+        cursor: pointer;
+    }
+
+    .hamburger-icon span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: #333;
+        transition: all 0.3s ease-in-out;
+    }
+}
+.btn-color-1 {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-color-2 {
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* Copy and paste this CSS rule to style.css */
+
+/* Add transitions for the menu and icon */
+.menu-links {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.menu-links.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Slide-in and slide-out animations */
+.menu-links.slide-in {
+    animation: slideIn 0.3s forwards;
+}
+
+.menu-links.slide-out {
+    animation: slideOut 0.3s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+/* Add transitions for the hamburger icon */
+.hamburger-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-icon.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Initial state for elements to be faded in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Final state for elements once they are in view */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
